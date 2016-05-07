@@ -7,6 +7,7 @@ import React, {
   TouchableOpacity,
   NativeModules
 } from 'react-native';
+const { CameraRoll } = React
 
 import MapView from 'react-native-maps';
 import config from '../config';
@@ -34,9 +35,8 @@ export default React.createClass({
       }
 
       else {
-        // You can display the image using either data:
-        const source = {uri: 'data:image/jpeg;base64,' + response.data, isStatic: true};
-        console.log("img in base64: ", source);
+        CameraRoll.saveImageWithTag(response.uri)
+          .then(newUri => console.log('new uri: ', newUri));
       }
     });
   },
