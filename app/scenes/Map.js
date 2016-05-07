@@ -10,6 +10,8 @@ import React, {
 import MapView from 'react-native-maps';
 import config from '../config';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 export default React.createClass({
   getInitialState() {
     return {
@@ -34,8 +36,9 @@ export default React.createClass({
                 key={'m' + index}
                 coordinate={markers[index].coordinate}
                 title={'Checkpoint ' + index}
-                description={'Description ' + index}
-              />
+                description={'Description ' + index}>
+                <Icon name={marker.iconName} size={30} color={marker.iconColor} />
+              </MapView.Marker>
             )
           })}
         </MapView>

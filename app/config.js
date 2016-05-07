@@ -37,7 +37,8 @@ export default {
       },
       title: '',
       description: '',
-      imgSrc: ''
+      iconName: 'book',
+      iconColor: '#900'
     },
     {
       coordinate: {
@@ -46,7 +47,8 @@ export default {
       },
       title: '',
       description: '',
-      imgSrc: ''
+      iconName: 'camera',
+      iconColor: '#333'
     },
     {
       coordinate: {
@@ -55,7 +57,8 @@ export default {
       },
       title: '',
       description: '',
-      imgSrc: ''
+      iconName: 'cart-plus',
+      iconColor: '#009'
     },
     {
       coordinate: {
@@ -64,7 +67,8 @@ export default {
       },
       title: '',
       description: '',
-      imgSrc: ''
+      iconName: 'briefcase',
+      iconColor: '#090'
     }
   ]
 }
