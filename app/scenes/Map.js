@@ -25,6 +25,7 @@ export default React.createClass({
     return (
       <View style={styles.container}>
         <MapView
+          showsUserLocation={true}
           style={styles.map}
           initialRegion={region}
           mapType='hybrid'
