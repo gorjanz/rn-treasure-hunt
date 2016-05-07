@@ -2,12 +2,19 @@
     package="com.rntreasurehunt">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
     <application
       android:allowBackup="true"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
+        <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="<insert-your-google-maps-android-API-key-here"/>
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
