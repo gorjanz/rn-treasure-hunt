@@ -5,9 +5,10 @@ import React, {
   View,
   Text,
   TouchableOpacity,
-  NativeModules
+  NativeModules,
+  CameraRoll
 } from 'react-native';
-const { CameraRoll } = React
+import { uploadPhoto } from '../utils/network';
 
 import MapView from 'react-native-maps';
 import config from '../config';
@@ -36,7 +37,19 @@ export default React.createClass({
 
       else {
         CameraRoll.saveImageWithTag(response.uri)
-          .then(newUri => console.log('new uri: ', newUri));
+          .then(newUri => {
+            console.log('new uri: ', newUri);
+
+            CameraRoll.getPhotos({first: 1}).then(data => {
+              const imageObj = {
+                uri: data.edges[0].node.image.uri,
+                name: "image" + new Date().getTime() + ".jpg"
+              };
+
+              // upload photo to server
+              uploadPhoto(config.upload.endpoint, imageObj, null, null, null);
+            });
+          });
       }
     });
   },

@@ -95,5 +95,9 @@ export default {
       skipBackup: true, // image will NOT be backed up to icloud
       path: 'images' // will save image at /Documents/images rather than the root
     }
+  },
+
+  upload: {
+    endpoint: '<url-to-your-post-server-which-handles-binary-data-upload'
   }
 }
