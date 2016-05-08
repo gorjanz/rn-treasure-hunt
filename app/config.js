@@ -12,7 +12,9 @@ export default {
 
   scenes: {
     login: 0,
-    map: 1
+    map: 1,
+    gallery: 2,
+    end: 3
   },
   
   aspectRatio: ASPECT_RATIO,
@@ -28,49 +30,6 @@ export default {
     latitudeDelta: LATITUDE_DELTA,
     longitudeDelta: LONGITUDE_DELTA
   },
-
-  markers: [
-    {
-      coordinate: {
-        latitude: 42.004915,
-        longitude: 21.392972
-      },
-      title: '',
-      description: '',
-      iconName: 'book',
-      iconColor: '#900'
-    },
-    {
-      coordinate: {
-        latitude: 42.003639,
-        longitude: 21.392650
-      },
-      title: '',
-      description: '',
-      iconName: 'camera',
-      iconColor: '#333'
-    },
-    {
-      coordinate: {
-        latitude: 42.003149,
-        longitude: 21.396228
-      },
-      title: '',
-      description: '',
-      iconName: 'cart-plus',
-      iconColor: '#009'
-    },
-    {
-      coordinate: {
-        latitude: 42.004441,
-        longitude: 21.396496
-      },
-      title: '',
-      description: '',
-      iconName: 'briefcase',
-      iconColor: '#090'
-    }
-  ],
 
 // image picker options
   imagePickerOptions: {
@@ -98,12 +57,68 @@ export default {
   },
 
   upload: {
-    endpoint: '<url-to-your-post-server-which-handles-binary-data-upload'
+    endpoint: '<url-to-your-post-server-which-handles-binary-data-upload>'
   },
 
   login: {
     endpoint: '<url-to-the-backend-login-server>'
   },
+
+  flickrCredentials: {
+    apiKey: {
+      name: 'api_key',
+      value: '<value-of-the-Flicker-API-key-for-your-app>'
+    },
+    apiSecret: {
+      value: '<value-of-the-Flicker-secret-for-your-app>'
+    },
+    authToken: {
+      name: 'auth_token',
+      value: '<value-for-the-AUTHENTICATION-TOKEN-from-the-Flicker-API>'
+    }
+  },
+
+  upload: {
+    endpoint: 'https://up.flickr.com/services/upload/',
+    fileKey: {
+      name: 'photo'
+    },
+    publicAccess: {
+      name: 'is_public',
+      value: 0  // 0 meaning not visible publicly / 1 otherwise
+    },
+    signature: {
+      name: 'api_sig',
+      value: '<generated-signature>'
+    },
+    maxNumberOfPhotosAllowed: 10
+  },
+
+  moveToAlbum: {
+    endpoint: 'https://api.flickr.com/services/rest/',
+    methodParam: {
+      name: 'method',
+      value: 'flickr.photosets.addPhoto'
+    },
+    photosetIdParam: {
+      name: 'photoset_id'
+    },
+    photoIdParam: {
+      name: 'photo_id'
+    },
+    responseFormatParam: {
+      name: 'format',
+      value: 'json'
+    },
+    noCallbackParam: {
+      name: 'nojsoncallback',
+      value: 1
+    },
+    signature: {
+      name: 'api_sig'
+    }
+  },
+
 
   storage: {
     rootKey: 'photos',
@@ -111,10 +126,16 @@ export default {
       usernameKey: 'username',
       teamDetailsKey: 'team'
     },
+    currentMarkerKey: 'currentMarker',
+    currentMarkerKey: 'currentMarker',
+    numberOfUploadedPhotosKey: 'numberOfUploadedPhotos'
   },
 
   colors: {
     sceneBackgroundColor: '#5386E4',
-    spinnerAnimationColor: '#b22222'
+    spinnerAnimationColor: '#B22222',
+    pressHighlight: '#CAE9FF',
+    buttonTextColor: '#001242',
+    borderColor: '#FBFCFF'
   }
 }
