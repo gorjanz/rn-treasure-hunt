@@ -101,8 +101,16 @@ export default {
     endpoint: '<url-to-your-post-server-which-handles-binary-data-upload'
   },
 
+  login: {
+    endpoint: '<url-to-the-backend-login-server>'
+  },
+
   storage: {
-    rootKey: 'photos'
+    rootKey: 'photos',
+    user: {
+      usernameKey: 'username',
+      teamDetailsKey: 'team'
+    },
   },
 
   colors: {

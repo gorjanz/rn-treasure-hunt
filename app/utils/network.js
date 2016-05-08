@@ -1,3 +1,5 @@
+import config from '../config';
+
 export function uploadPhoto(endpoint, image, successCallback, errorCallback, onProgressCallback) {
   const xhr = new XMLHttpRequest();
 
@@ -38,4 +40,25 @@ export function uploadPhoto(endpoint, image, successCallback, errorCallback, onP
     };
   }
   xhr.send(formData);
+}
+
+/**
+ * Retrieve details for the person with the given shortname.
+ *
+ * @param userName
+ * @param successFn
+ */
+export function login(userName, successFn) {
+  console.log('Attempting to login person with shortname: ', userName);
+  fetch(config.login.endpoint + userName)
+    .then((response) => response.text())
+    .then((responseText) => {
+      const data = JSON.parse(responseText);
+
+      console.log('Login attempt resulted in response data: ', data);
+      if (successFn) {
+        successFn(data);
+      }
+    })
+    .catch((err) => console.log(err));
 }
