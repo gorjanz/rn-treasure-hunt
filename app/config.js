@@ -57,10 +57,6 @@ export default {
     }
   },
 
-  upload: {
-    endpoint: '<url-to-your-post-server-which-handles-binary-data-upload>'
-  },
-
   login: {
     endpoint: '<url-to-the-backend-login-server>'
   },
@@ -120,7 +116,6 @@ export default {
     }
   },
 
-
   storage: {
     rootKey: 'photos',
     user: {
@@ -128,7 +123,7 @@ export default {
       teamDetailsKey: 'team'
     },
     currentMarkerKey: 'currentMarker',
-    currentMarkerKey: 'currentMarker',
+    firstOpenKey: 'showOnboarding',
     numberOfUploadedPhotosKey: 'numberOfUploadedPhotos'
   },
 
