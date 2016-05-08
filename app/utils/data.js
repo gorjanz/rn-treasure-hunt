@@ -8,6 +8,7 @@ export function getMarkersForTeam(team) {
         longitude: 21.392972
       },
       title: '',
+      passphrase: 'swordfish',
       description: '',
       iconName: 'book',
       iconColor: '#900'
@@ -19,6 +20,7 @@ export function getMarkersForTeam(team) {
       },
       title: '',
       description: '',
+      passphrase: 'open sesame',
       iconName: 'camera',
       iconColor: '#333'
     }
