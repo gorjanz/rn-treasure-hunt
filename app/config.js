@@ -128,7 +128,7 @@ export default {
   },
 
   colors: {
-    sceneBackgroundColor: '#5386E4',
+    sceneBackgroundColor: '#FA5007',
     spinnerAnimationColor: '#B22222',
     pressHighlight: '#CAE9FF',
     buttonTextColor: '#001242',
