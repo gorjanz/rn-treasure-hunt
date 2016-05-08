@@ -101,6 +101,10 @@ export default {
     endpoint: '<url-to-your-post-server-which-handles-binary-data-upload'
   },
 
+  storage: {
+    rootKey: 'photos'
+  },
+
   colors: {
     sceneBackgroundColor: '#5386E4',
     spinnerAnimationColor: '#b22222'
