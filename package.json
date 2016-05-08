@@ -1,7 +1,7 @@
 {
   "name": "RNTreasureHunt",
   "description": "React Native based app to support real-world Treasure Hunt game",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "author": "gorjanz",
   "repository": {
