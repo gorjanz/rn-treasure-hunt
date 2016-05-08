@@ -89,7 +89,7 @@ export default React.createClass({
             autoCorrect={false}
             autoFocus={true}
             onChangeText={(value) => this.onTextChange(value)}
-            placeholder=" ex. tne, gz etc..."
+            placeholder=" ex. agent007, etc..."
             onSubmitEditing={this.submitUsername}
           />
           <TouchableHighlight
