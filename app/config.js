@@ -11,10 +11,11 @@ const SPACE = 0.001;
 export default {
 
   scenes: {
-    login: 0,
-    map: 1,
-    gallery: 2,
-    end: 3
+    onboarding: 0,
+    login: 1,
+    map: 2,
+    gallery: 3,
+    end: 4
   },
   
   aspectRatio: ASPECT_RATIO,
