@@ -99,5 +99,10 @@ export default {
 
   upload: {
     endpoint: '<url-to-your-post-server-which-handles-binary-data-upload'
+  },
+
+  colors: {
+    sceneBackgroundColor: '#5386E4',
+    spinnerAnimationColor: '#b22222'
   }
 }
