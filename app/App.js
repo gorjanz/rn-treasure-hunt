@@ -3,6 +3,7 @@ import config from './config';
 
 import Login from './scenes/Login';
 import Map from './scenes/Map';
+import Gallery from './scenes/Gallery';
 
 export default React.createClass({
   displayName: "Application",
@@ -49,5 +50,13 @@ const scenes = {
   1: {
     name: "Map",
     renderer: (push, pop) => <Map push={push} pop={pop} />
+  },
+  2: {
+    name: "Gallery",
+    renderer: (push, pop) => <Gallery push={push} pop={pop} />
+  },
+  3: {
+    name: "End",
+    renderer: (push, pop) => <End push={push} pop={pop} />
   }
 };
